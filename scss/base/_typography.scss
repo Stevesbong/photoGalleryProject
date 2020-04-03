@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', Arial, sans-serif;
+    color: #fff;
+    height: 100vh;
+    max-width: 1500px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.searchbox {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 2%;
+}
+
+input {
+    font-size: 16px;
+    padding: 5px;
+    width: 70%;
+}
+
+a img {
+    width: 100%;
+    padding: 5%;
+}
+
+.lb-data .lb-number {
+    display: none!important;
+}
+
+.lb-data .lb-close {
+    display: none;
+}

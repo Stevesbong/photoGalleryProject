@@ -1,0 +1,24 @@
+@mixin flexlayout ($disp: flex,         // display
+                $dirct: null,           // flex-direction
+                $flxwrap: null,         // flex-wrap
+                $justcont: null,        // justify-content
+                $alignitms: null,       // align-items
+                $flx: null,             // flex
+                $alignslf: null         // align-self
+                ) {
+    display: $disp;
+    flex-direction: $dirct;
+    flex-wrap: $flxwrap;
+    justify-content: $justcont;
+    align-items: $alignitms;
+    flex: $flx;
+    align-self: $alignslf;
+    @content;
+}
+
+@mixin mq($break) {
+    $value: map-get( $breakpoints, $break );
+    @media ( min-width: $value ) {
+        @content;
+    }
+}

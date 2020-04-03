@@ -1,0 +1,45 @@
+@include mq(med) {
+    .container {
+        width: 85%;
+    }
+    .searchbox {
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    .gallery {
+        @include flexlayout ( $dirct: row, 
+                            $flxwrap: wrap, 
+                            $justcont: flex-start) {
+        }
+    }
+
+    .photo {
+        width: 40%;
+    }
+}
+
+@include mq(lg) {
+    .container {
+        width: 80%;
+    }
+    input {
+        width: 38%;
+    }
+
+    .photo {
+        width: 25%;
+    }
+
+    .lb-data .lb-details {
+        margin-top: 15px;
+    }
+
+    .lb-data .lb-close {
+        display: block;
+    }
+}
