@@ -13,8 +13,7 @@
 
     .gallery {
         @include flexlayout ( $dirct: row, 
-                            $flxwrap: wrap, 
-                            $justcont: flex-start) {
+                            $flxwrap: wrap) {
         }
     }
 
