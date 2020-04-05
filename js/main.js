@@ -1,6 +1,12 @@
 
     // INPUT EVENT LISTENER 
-document.getElementById('search').addEventListener("input", (e) => {
+const searchInput = document.getElementById('search');
+
+searchInput.addEventListener("input", e => {
+    // OR
+    // document.getElementById('search').addEventListener("input", (e) => {
+    //    ...
+    // })
 
     // PARAMETER INPUT EVENT VALUE
     let inputvalue = e.target.value
@@ -21,7 +27,7 @@ document.getElementById('search').addEventListener("input", (e) => {
             element.parentElement.style.display = "none"
             
             // UNSET GROUP OF IMAGES FROM LIGHTBOX PLUGIN
-            // THIS MAKES INCLUDE INPUT VALUE IMAGES VISIBLE ONLY
+            // THIS MAKES ONLY INCLUDE INPUT VALUE IMAGES TO VISIBLE ON THE LIGHTBOX 
             element.setAttribute('data-lightbox', "")
         }
         else { // IF TITLE DOES INCLUDE INPUT VALUE   
