@@ -12,11 +12,17 @@ searchInput.addEventListener("input", e => {
     //    ...
     // })
 
-    // PUT THE SEARCH RESULTS TO TOP LEFT SIDE
-    gallery.style.justifyContent = "flex-start"
-
     // PARAMETER INPUT EVENT VALUE
     let inputValue = e.target.value
+    
+    
+    // IF THERE IS NO INPUT VALUES IN THE SEARCHBOX, SET GALLERY DIV TO CENTER
+    if (inputValue === "") {
+        gallery.style.justifyContent = "center"
+    } else { // ELSE, PUT THE SEARCH RESULTS TO TOP LEFT SIDE
+        gallery.style.justifyContent = "flex-start"
+    }
+
 
     // SELECT ALL ANCHOR TAG FROM GALLERY
     let imageAnchor = document.querySelectorAll('.photo a');
@@ -41,8 +47,4 @@ searchInput.addEventListener("input", e => {
         }
     });
 
-    // IF THERE IS NO INPUT VALUES IN THE SEARCHBOX, SET GALLERY DIV TO CENTER
-    if (inputValue === "") {
-        gallery.style.justifyContent = "center"
-    }
 })
